@@ -89,6 +89,8 @@ export default {
     },
 
     async updateWorkout(updatedWorkout) {
+      const workoutData = { ...updatedWorkout };
+      console.log('Updating workout:', updatedWorkout);
 	  try {
 	    const token = localStorage.getItem('token');
 	    await axios.put(
