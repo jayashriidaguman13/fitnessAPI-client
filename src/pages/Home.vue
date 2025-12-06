@@ -44,7 +44,7 @@ export default {
   components: { WorkoutCard },
   data() {
     return {
-      apiURL: 'http://localhost:4000',
+      apiURL: import.meta.env.VITE_API_URL,
       workouts: [],
       showAddModal: false,
       newWorkout: { name: '', duration: null }
